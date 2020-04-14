@@ -21,29 +21,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200412153610246.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200412154126822.png">
 <meta property="article:published_time" content="2020-04-14T13:22:00.000Z">
-<meta property="article:modified_time" content="2020-04-14T13:22:10.051Z">
+<meta property="article:modified_time" content="2020-04-14T13:40:53.855Z">
 <meta property="article:author" content="Kurt">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="js">
-<meta property="article:tag" content="jquery">
-<meta property="article:tag" content="javascript">
-<meta property="article:tag" content="html5">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
-<meta property="article:tag" content="Programmer">
-<meta property="article:tag" content="Coder">
-<meta property="article:tag" content="Geek">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="css3">
-<meta property="article:tag" content="用户体验">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200412151525344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAwMTY4MQ==,size_16,color_FFFFFF,t_70">
   
@@ -196,6 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>mysql配置主从效果：主数据库进行操作时，从数据库同步发生变动。<br>主从原理：主数据库的操作写入到日志中，从数据库从日志中进行读取，进行操作<br>前提：在两个虚拟机中安装好mysql（也可直接克隆）<br>mysql安装：<a href="https://blog.csdn.net/weixin_44001681/article/details/105465704" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44001681/article/details/105465704</a><br>系统：cenos 6.5<br>假设：<br>主数据库主机ip为192.168.17.132<br>从数据库主机ip为192.168.17.133<br>步骤：<br>1.修改主数据库的my.cnf文件</p>
+<a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br></pre></td></tr></table></figure>
 <p>添加两处：<br>log_bin 日志文件名称,启用日志功能<br>server_id 给定一个值<br><img src="https://img-blog.csdnimg.cn/20200412151525344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAwMTY4MQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2.进入主数据库客户端工具</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
@@ -258,6 +239,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -492,6 +484,10 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
